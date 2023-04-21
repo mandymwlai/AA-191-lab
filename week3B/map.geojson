@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"place":"this is little tokyo","color":"maybe green?"},"geometry":{"coordinates":[-118.24180055274195,34.049166714744715],"type":"Point"},"id":0},{"type":"Feature","properties":{"place":""},"geometry":{"coordinates":[-118.25059859015037,34.05446824560089],"type":"Point"},"id":1}]}

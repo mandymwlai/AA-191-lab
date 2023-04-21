@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"place":"Epicuria on the hill","color":"purple"},"geometry":{"coordinates":[-118.44999649922003,34.07305288794912],"type":"Point"},"id":0},{"type":"Feature","properties":{"place":"Northern Cafe","color":"orange"},"geometry":{"coordinates":[-118.44636904548682,34.061355035600116],"type":"Point"},"id":1}]}

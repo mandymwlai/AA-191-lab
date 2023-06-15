@@ -10,13 +10,13 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 function addMarker(data){
     L.circleMarker([data.lat,data.lng]).addTo(map).bindPopup(`<h2>${data['What is your favourite restaurant in LA? ']}</h2> <h3>${data['What is your favourite dish from there? ']}</h3>`)
-    createButtons(data.lat,data.lng,data['What is your favourite restaurant in LA? '])
+    createButton(data.lat,data.lng,data['What is your favourite restaurant in LA? '])
     return data.message
 }
 
 
 
-function createButtons(lat,lng,title){
+function createButton(lat,lng,title){
     const newButton = document.createElement("button"); // adds a new button
     newButton.id = "button"+title; // gives the button a unique id
     newButton.innerHTML = title; // gives the button a title

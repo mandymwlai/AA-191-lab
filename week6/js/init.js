@@ -1,5 +1,5 @@
 // declare variables
-let mapOptions = {'center': [34.0709,-118.444],'zoom':5}
+let mapOptions = {'center': [34.0709,-118.444],'zoom':11}
 
 // use the variables
 const map = L.map('the_map').setView(mapOptions.center, mapOptions.zoom);
@@ -9,12 +9,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 function addMarker(data){
-    // console.log(data)
-    // these are the names of our lat/long fields in the google sheets:
-    L.circleMarker([data.lat,data.lng]).addTo(map).bindPopup(`<h2>${data['What zip code do you live in?']}</h2> <h3>${data['Have you been vaccinated?']}</h3>`)
-    createButtons(data.lat,data.lng,data['What zip code do you live in?'])
-    return
+    L.circleMarker([data.lat,data.lng]).addTo(map).bindPopup(`<h2>${data['What is your favourite restaurant in LA? ']}</h2> <h3>${data['What is your favourite dish from there? ']}</h3>`)
+    createButtons(data.lat,data.lng,data['What is your favourite restaurant in LA? '])
+    return data.message
 }
+
+
 
 function createButtons(lat,lng,title){
     const newButton = document.createElement("button"); // adds a new button
@@ -29,7 +29,7 @@ function createButtons(lat,lng,title){
     spaceForButtons.appendChild(newButton);//this adds the button to our page.
 }
 
-const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSNq8_prhrSwK3CnY2pPptqMyGvc23Ckc5MCuGMMKljW-dDy6yq6j7XAT4m6GG69CISbD6kfBF0-ypS/pub?output=csv"
+const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSoUnSMdLyHVWGU0ezkYxS8VZiOUi-m0DFsmkZO0zNWDXAPMbSfPcEvESerLY6a8lrW9yufc8rP6cZE/pub?output=csv"
 
 function loadData(url){
     Papa.parse(url, {
